@@ -1,9 +1,10 @@
 require 'pry'
 def my_collect(array)
   i = 0
+  caps = []
   while i < array.length
-    yield(array[i])
-    binding.pry
+    caps << yield(array[i])
+
     i += 1
   end
 end
